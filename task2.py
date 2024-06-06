@@ -9,12 +9,33 @@ If you are stuck, don't forget to refer to your assignment on lists to help you 
 The return value is the largest value in the list
 (2 points)
 """
+
+
+
+
 def largest():
   
-  return
+  Tuple = ()
+  a = 0
+  
+  while a < 10:
+    
+    try:
+      num = int(input("Please enter a number: "))
+      Tuple = Tuple + (num,)
+      a = a + 1
+    except:
+      print("Not a number")
+      print("Please try again!")
+    
+    
+    if a == 10:
+      List = list(Tuple)
+      List.sort()
+      print(List)
+      for max in [9]:
+        print(List[max],'is your lagrest number!')
 
-if __name__ == "__main__":
-  assert largest((3,1,4,7,13,9)) == 13
-  assert largest([5,1,12.3]) == 12.3
-  assert largest([-3,-1,1.2,0.2]) == 1.2
+largest()
 
+#done

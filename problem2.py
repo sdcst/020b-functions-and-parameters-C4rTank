@@ -9,13 +9,34 @@ Note that the coordinates should be signed (positive or negative) floats
 """
 import math
 
+
+
 def distance():
-    return
+    a = False
+    while a == False:
+        x = input("Please input an x value: ")
+        try:
+            x = float(x)
+            a = True
+            b = False
+        except:
+            print("Invalid input")
+            print("Please try again")
 
-if __name__ == "__main__":
-    d = distance( (2,4) , (6,3) )
-    assert round(d,3) == 4.123
-    d = distance( (-3,2.2) , (1,2))
-    assert round(d,3) == 4.005
+    while b == False:
+        y = input("Please input an y value: ")
+        try:
+            y = float(y)
+            b = True
+        except:
+            print("Invalid input")
+            print("Please try again")
+    if x > y:
+        d = x - y
+    elif x < y:
+        d = y - x
 
+    print('The distance between' ,x, 'and' ,y, 'is', d)
 
+distance()
+#done

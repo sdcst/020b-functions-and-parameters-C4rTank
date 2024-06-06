@@ -7,12 +7,28 @@ added together
 (2 points)
 """
 def perimeter():
-  return
+  
+  Tuple = ()
+  a = 0
+  
+  while a < 10:
+    
+    try:
+      num = int(input("Please enter a number: "))
+      Tuple = Tuple + (num,)
+      a = a + 1
+    except:
+      print("Not a number")
+      print("Please try again!")
+    
+    
+    if a == 10:
+      List = list(Tuple)
+      Everything = sum(List)
+      Everything_str = str(Everything)
+      print("Everything added in the list is", Everything_str+'!')
 
-if __name__ == "__main__":
-  assert perimeter( [5,2,3,4] ) == 14
-  assert perimeter( [5,2,4] ) == 11
-  assert perimeter( [5,2.2,3] ) == 10.2
-  assert perimeter( [5,2,3,4,1,3,2] ) == 20
-  assert perimeter( [4,4,4,4] ) == 16
+perimeter()
+
+#done
 
